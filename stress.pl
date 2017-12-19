@@ -9,8 +9,8 @@ while (1) {
   connect($sock , sockaddr_in($port, inet_aton($host)));
   $connects += 1;
   print "[$username/$connects]\n";
-  send($sock , "\x06\x00$protocol\x00\x00\x00\x02" , 0);
-  send($sock , "\x0c\x00\n$username", 0);
+  send($sock, "\x06\x00$protocol\x00\x00\x00\x02" , 0);
+  send($sock, "\x0c\x00\n$username", 0);
   sleep(0.01);
   close($sock);
 }
